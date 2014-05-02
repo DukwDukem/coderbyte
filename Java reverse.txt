@@ -1,0 +1,35 @@
+import java.util.*; 
+import java.io.*;
+
+class Function {  
+  public String FirstReverse(String str) { 
+  
+    // code goes here 
+    int length = str.length();
+    int counter = length;
+    String rev = "";
+
+    for (int i = 0 ; i <length; i++){
+            rev += str.charAt(counter-1) ;
+            counter--;
+    }
+    return rev;
+    /* Note: In Java the return type of a function and the 
+       parameter types being passed are defined, so this return 
+       call must match the return type of the function.
+       You are free to modify the return type. */
+    
+  }      
+}
+
+class Main {
+  public static void main (String[] args) {  
+   
+    // keep this function call here
+    String str = "";
+    Scanner  s = new Scanner(System.in);
+    Function c = new Function();
+    System.out.print(c.FirstReverse(s.nextLine())); 
+    
+  }
+} 
